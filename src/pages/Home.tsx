@@ -88,6 +88,76 @@ const Home = () => {
         </div>
       </section>
 
+      {/* What is Dyslexia Section */}
+      <section className="container mx-auto px-4 py-16 bg-gradient-to-br from-primary-soft/20 to-accent-soft/20">
+        <div className="max-w-4xl mx-auto text-center slide-up">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-dyslexic">
+            🧠 What is Dyslexia? Let's Learn Together! 
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="glass p-6 rounded-2xl">
+              <h3 className="text-xl font-bold text-foreground mb-4 font-dyslexic">
+                📖 Normal Reading Experience
+              </h3>
+              <div className="space-y-3 text-left">
+                <div className="bg-background/50 p-3 rounded-lg">
+                  <p className="font-medium">Word: "beautiful"</p>
+                  <p className="text-muted-foreground">Sounds like: "BYOO-ti-ful"</p>
+                  <p className="text-sm text-green-600">✅ Letters stay in place</p>
+                </div>
+                <div className="bg-background/50 p-3 rounded-lg">
+                  <p className="font-medium">Word: "elephant"</p>
+                  <p className="text-muted-foreground">Sounds like: "EL-uh-fant"</p>
+                  <p className="text-sm text-green-600">✅ Easy to recognize</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="glass p-6 rounded-2xl">
+              <h3 className="text-xl font-bold text-foreground mb-4 font-dyslexic">
+                🌈 Dyslexic Reading Experience  
+              </h3>
+              <div className="space-y-3 text-left">
+                <div className="bg-background/50 p-3 rounded-lg">
+                  <p className="font-medium">Word: "b-e-a-u-t-i-f-u-l"</p>
+                  <p className="text-muted-foreground">Might sound: "be-AW-ti... wait, beau-TI-ful?"</p>
+                  <p className="text-sm text-orange-600">🔄 Letters might flip or move</p>
+                </div>
+                <div className="bg-background/50 p-3 rounded-lg">
+                  <p className="font-medium">Word: "elephant"</p>
+                  <p className="text-muted-foreground">Might sound: "el-eh-FANT or ele-PHANT?"</p>
+                  <p className="text-sm text-orange-600">🤔 Needs more time to process</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-turquoise-soft/30 to-pink-soft/30 p-8 rounded-3xl">
+            <h3 className="text-2xl font-bold text-foreground mb-4 font-dyslexic">
+              💡 The Magic of Dyslexia
+            </h3>
+            <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+              Dyslexia isn't about being "not smart" - it's just a different way brains process letters and sounds! 🧩
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
+              <div className="bg-white/50 p-4 rounded-xl">
+                <span className="text-lg">🎨</span>
+                <p className="font-medium mt-2">Super Creative Thinkers</p>
+              </div>
+              <div className="bg-white/50 p-4 rounded-xl">
+                <span className="text-lg">🔍</span>
+                <p className="font-medium mt-2">Amazing Problem Solvers</p>
+              </div>
+              <div className="bg-white/50 p-4 rounded-xl">
+                <span className="text-lg">⚡</span>
+                <p className="font-medium mt-2">Fast Visual Processors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12 slide-up">
