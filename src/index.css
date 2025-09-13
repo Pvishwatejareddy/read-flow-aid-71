@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dyslexia-friendly design system with soft, calming colors and accessible typography */
+
+@layer base {
+  :root {
+    /* Kid-friendly bright backgrounds */
+    --background: 195 100% 98%;
+    --foreground: 230 15% 20%;
+
+    /* Playful card backgrounds */
+    --card: 0 0% 100%;
+    --card-foreground: 230 15% 20%;
+
+    /* Popover styling */
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 15% 20%;
+
+    /* Bright blue primary - #00bbf9 */
+    --primary: 195 100% 49%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 195 100% 85%;
+
+    /* Warm yellow secondary - #fee440 */
+    --secondary: 54 99% 63%;
+    --secondary-foreground: 230 15% 20%;
+
+    /* Muted tones with warmth */
+    --muted: 195 20% 95%;
+    --muted-foreground: 230 10% 50%;
+
+    /* Purple accent - #9b5de5 */
+    --accent: 261 69% 63%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Turquoise helper - #00f5d4 */
+    --turquoise: 168 100% 48%;
+    --turquoise-foreground: 0 0% 100%;
+
+    /* Pink fun - #f15bb5 */
+    --pink: 328 85% 67%;
+    --pink-foreground: 0 0% 100%;
+
+    /* Gentle destructive */
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Playful borders */
+    --border: 195 30% 88%;
+    --input: 195 30% 90%;
+    --ring: 195 100% 49%;
+
+    /* Enhanced dyslexia-friendly colors */
+    --dyslexia-highlight: 54 99% 80%;
+    --dyslexia-word: 261 60% 85%;
+    --success-soft: 168 70% 75%;
+    --warning-soft: 30 90% 75%;
+
+    /* Enhanced radius for softer feel */
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with softer contrasts for dyslexia-friendly reading */
+    --background: 215 25% 8%;
+    --foreground: 35 30% 92%;
+    --card: 215 25% 12%;
+    --card-foreground: 35 30% 92%;
+    --popover: 215 25% 12%;
+    --popover-foreground: 35 30% 92%;
+    --primary: 210 65% 70%;
+    --primary-foreground: 215 25% 8%;
+    --secondary: 215 20% 18%;
+    --secondary-foreground: 35 30% 85%;
+    --muted: 215 20% 15%;
+    --muted-foreground: 35 15% 65%;
+    --accent: 140 35% 60%;
+    --accent-foreground: 140 40% 15%;
+    --destructive: 0 50% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 210 65% 70%;
+    --dyslexia-highlight: 50 70% 35%;
+    --dyslexia-word: 280 30% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  /* Dyslexia-friendly font stacks */
+  .font-dyslexic {
+    font-family: 'OpenDyslexic', Arial, Verdana, sans-serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50;
+  }
+  
+  /* Dyslexia-friendly text spacing */
+  .dyslexic-text {
+    @apply font-dyslexic text-lg leading-relaxed tracking-wide;
+    word-spacing: 0.2em;
+    letter-spacing: 0.1em;
+  }
+  
+  /* Highlighted words for AI suggestions with kid-friendly hover effects */
+  .highlighted-word {
+    @apply bg-dyslexia-highlight/40 px-2 py-1 rounded-lg cursor-help 
+           border-b-2 border-dyslexia-word/50 transition-all duration-300
+           hover:bg-dyslexia-highlight/70 hover:border-dyslexia-word/80 hover:scale-105
+           hover:shadow-lg hover:shadow-dyslexia-word/20;
+  }
+  
+  /* Interactive hover tooltip effect */
+  .highlighted-word:hover::after {
+    @apply absolute z-10 bg-card border border-border rounded-lg p-2 text-sm
+           shadow-lg transform -translate-y-full left-1/2 -translate-x-1/2;
+    content: "Click me for help! 🪄";
+    animation: bounce-gentle 1s ease-in-out infinite;
+  }
+  
+  /* Feature card styling */
+  .feature-card {
+    @apply glass rounded-2xl p-6 transition-all duration-300
+           hover:shadow-lg hover:scale-[1.02] hover:bg-card/90;
+  }
+  
+  /* Gentle animations */
+  .fade-in {
+    @apply animate-in fade-in-0 duration-500;
+  }
+  
+  .slide-up {
+    @apply animate-in slide-in-from-bottom-4 duration-500;
+  }
+  
+  /* Success animations */
+  .success-bounce {
+    @apply animate-bounce;
+  }
+}
